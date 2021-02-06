@@ -1,4 +1,61 @@
-.flex {
+.boardContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    /* background: radial-gradient(#E66422, rgb(164, 50, 6), rgb(164, 26, 6)); */
+    max-width: 450px;
+    max-height: 450px;
+    min-width: 450px;
+    min-height: 450px;
+    border: 2px solid rgb(210, 80, 20);
+    box-shadow: 0px 10px 14px rgb(0 0 0 / 50%);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    visibility: visible;
+}
+
+.vacant {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: radial-gradient(#ffffff, rgb(153 149 148));
+    box-shadow: 0px 2px 40px #bc9b88;
+}
+
+.marble {
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    margin: 5px;
+    border-radius: 30px;
+    /* border: 1px solid white; */
+    box-shadow: 'none';
+    border: 2px solid #fff !important;
+}
+
+.marble.picked {
+    border: 2px solid #10a325 !important;
+    box-shadow: 3px 1px 2px #bc9b88 !important;
+}
+
+.vacant.blank {
+    visibility: hidden;
 }

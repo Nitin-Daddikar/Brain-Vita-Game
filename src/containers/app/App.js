@@ -7,7 +7,7 @@ import Board from '../../components/board/Board';
 class App extends React.Component {
   render() {
     return (
-      <div className={appStyle.flex}>
+      <div>
         <Header/>
         <Board boardStatus={this.props.boardStatus}/>
       </div>
