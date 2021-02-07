@@ -31,3 +31,11 @@ export const marbleRemoved = (payload) => ({
   type: types.MARBLE_REMOVED,
   payload,
 });
+
+/**
+ * @description action for restart game
+ */
+export const resetBoard = (payload) => ({
+  type: types.RESET_BOARD,
+  payload,
+});

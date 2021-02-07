@@ -1,5 +1,5 @@
 import cloneDeep from 'lodash/cloneDeep';
-import { MARBLE_PICKED, MARBLE_RELEASED, MARBLE_DROPPED, MARBLE_REMOVED } from '../const/actionTypes';
+import * as types from '../const/actionTypes';
 import { DEFAULT_BOARD, PICKED, OCCUPIED, VACANT } from '../const/boardConstants';
 
 const defaultState = {
@@ -9,7 +9,7 @@ const defaultState = {
 
 const appReducer = (state = defaultState, action) => {
     switch (action.type) {
-        case MARBLE_PICKED:
+        case types.MARBLE_PICKED: // action when marble is picked
             state.boardStatus[action.payload.x][action.payload.y] =  PICKED;
             state = {
                 ...state,
@@ -17,8 +17,8 @@ const appReducer = (state = defaultState, action) => {
                 boardStatus : cloneDeep(state.boardStatus)
             }
             break;
-        case MARBLE_RELEASED:
-        case MARBLE_DROPPED:
+        case types.MARBLE_RELEASED: // action when marble is dropped at same location
+        case types.MARBLE_DROPPED: // action when marble is dropped at vacant location
             state.boardStatus[action.payload.x][action.payload.y] =  OCCUPIED;
             state = {
                 ...state,
@@ -26,12 +26,19 @@ const appReducer = (state = defaultState, action) => {
                 boardStatus : cloneDeep(state.boardStatus)
             }
             break;
-        case MARBLE_REMOVED:
+        case types.MARBLE_REMOVED: // action to remove marble from board and make place vacant
             state.boardStatus[action.payload.x][action.payload.y] =  VACANT;
             state = {
                 ...state,
                 pickedMarble: null,
                 boardStatus : cloneDeep(state.boardStatus)
+            }
+            break;
+        case types.RESET_BOARD: // action to restart/reset game
+            state = {
+                ...state,
+                pickedMarble: null,
+                boardStatus : cloneDeep(DEFAULT_BOARD)
             }
             break;
     }

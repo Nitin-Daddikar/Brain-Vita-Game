@@ -6,6 +6,10 @@ export const PICKED = "MARBLE_PICKED";
 export const VACANT = "VACANT";
 export const BLANK_SPACE = "BLANK_SPACE";
 
+
+/**
+ * @description default marbles placement
+ */
 export const DEFAULT_BOARD = [
     [BLANK_SPACE, BLANK_SPACE, OCCUPIED, OCCUPIED, OCCUPIED, BLANK_SPACE, BLANK_SPACE],
     [BLANK_SPACE, BLANK_SPACE, OCCUPIED, OCCUPIED, OCCUPIED, BLANK_SPACE, BLANK_SPACE],

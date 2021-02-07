@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    flex-direction: column;
 }
 
 .board {
@@ -10,12 +10,11 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 50%;
-    /* background: radial-gradient(#E66422, rgb(164, 50, 6), rgb(164, 26, 6)); */
     max-width: 450px;
     max-height: 450px;
     min-width: 450px;
     min-height: 450px;
-    border: 2px solid rgb(210, 80, 20);
+    border: 1px solid rgb(176 167 167);
     box-shadow: 0px 10px 14px rgb(0 0 0 / 50%);
 }
 
@@ -49,11 +48,34 @@
     height: 42px;
     margin: 5px;
     border-radius: 30px;
-    box-shadow: 'none';
-    border: 2px solid #fff !important;
+    border: 2px solid #fff;
 }
 
 .picked {
-    border: 2px solid #10a325 !important;
-    box-shadow: 3px 1px 2px #bc9b88 !important;
+    border: 2px solid #10a325;
+    box-shadow: 3px 1px 2px #bc9b88;
+}
+
+#errorMessage {
+    color: red;
+    margin: 20px 0 10px 0;
+    font-weight: 700;
+}
+
+#errorMessage:empty {
+    height: 21px;
+}
+
+#resetButton {
+    width: 120px;
+    height: 45px;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+    background-color: rgb(239 18 18);
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0px 10px 14px rgb(0 0 0 / 50%);
 }

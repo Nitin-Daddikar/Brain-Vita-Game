@@ -1,0 +1,19 @@
+#formContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#submitButton {
+    width: 120px;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 10px;
+    line-height: 25px;
+    background-color: rgb(26 95 1);
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0px 10px 14px rgb(0 0 0 / 50%);
+}
