@@ -2,6 +2,7 @@
  * @description board status constant
 */
 export const OCCUPIED = "OCCUPIED_WITH_MARBLE";
+export const PICKED = "MARBLE_PICKED";
 export const VACANT = "VACANT";
 export const BLANK_SPACE = "BLANK_SPACE";
 

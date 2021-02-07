@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <h1>Brain Vita Game</h1>
+        <h1 className="text-center">Brain Vita Game</h1>
     );
 }
 

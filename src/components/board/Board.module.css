@@ -37,7 +37,10 @@
     align-items: center;
     border-radius: 30px;
     background: radial-gradient(#ffffff, rgb(153 149 148));
-    box-shadow: 0px 2px 40px #bc9b88;
+}
+
+.vacant.blank {
+    visibility: hidden;
 }
 
 .marble {
@@ -46,16 +49,11 @@
     height: 42px;
     margin: 5px;
     border-radius: 30px;
-    /* border: 1px solid white; */
     box-shadow: 'none';
     border: 2px solid #fff !important;
 }
 
-.marble.picked {
+.picked {
     border: 2px solid #10a325 !important;
     box-shadow: 3px 1px 2px #bc9b88 !important;
-}
-
-.vacant.blank {
-    visibility: hidden;
 }

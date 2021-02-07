@@ -1,6 +1,7 @@
 /**
  * @description app action types
 */
-export const UPDATE_BOARD_STATUS = "UPDATE_BOARD_STATUS";
-export const SELECTED_FIRST_TILE = "SELECTED_FIRST_TILE";
-export const SELECTED_SECOND_TILE = "SELECTED_SECOND_TILE";
+export const MARBLE_PICKED = "MARBLE_PICKED";
+export const MARBLE_RELEASED = "MARBLE_RELEASED";
+export const MARBLE_DROPPED = "MARBLE_DROPPED";
+export const MARBLE_REMOVED = "MARBLE_REMOVED";
